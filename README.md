@@ -20,4 +20,18 @@ bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic quote-re
 bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic quotes --from-beginning
 
 ![This is an image](https://github.com/pranavnayak/quarkus-project5-kafa/blob/main/Capture.JPG)
+
+# Application Info
+The sample project has two applications communicating via Kafka. 
+
+quarkus-project5-kafka1-producer application lets the user request some quotes over a HTTP endpoint http://localhost:8080/quotes.html. For each quote request a random identifier is generated and returned to the user, to mark the quote request as pending. At the same time, the generated request id is sent over a Kafka topic "quote-requests".
+
+
+quarkus-project5-kafka1-consumer will read from the quote-requests topic, put a random price to the quote, and send it to a Kafka topic named "quotes".
+
+quarkus-project5-kafka1-producer will then read the quotes and send them to the browser using server-sent events. The user will therefore see the quote price updated from pending to the received price in real-time.
+
+![This is an image](https://github.com/pranavnayak/quarkus-project5-kafa/blob/main/Flow%20DIagram.jpg)
+
+![This is an image](https://github.com/pranavnayak/quarkus-project5-kafa/blob/main/2.JPG)
  
