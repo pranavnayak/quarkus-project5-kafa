@@ -2,7 +2,7 @@
  A Sample Java MicroProfile Microservice Application in RedHat Quarkus demonstrating Reactive Messaging to interact with Apache Kafka.
 
 # Running the sample application
-Starts Apache Kafka and ZooKeeper via Docker Compose via docker-compose-local.yaml,changing the value of the KAFKA_ADVERTISED_LISTENERS variable so it contains your host machine's name or ip address. Then run:
+Start Apache Kafka and ZooKeeper via Docker Compose via docker-compose-local.yaml,changing the value of the KAFKA_ADVERTISED_LISTENERS variable so it contains your host machine's name or ip address. Then run:
 
 docker-compose -f docker-compose-local.yaml up
 
@@ -18,4 +18,6 @@ Run the commands to view messages produced/consumed form both the topics used in
 
 bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic quote-requests --from-beginning
 bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic quotes --from-beginning
+
+![This is an image](https://github.com/pranavnayak/quarkus-project5-kafa/blob/main/Capture.JPG)
  
