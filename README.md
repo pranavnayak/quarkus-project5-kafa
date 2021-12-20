@@ -12,7 +12,7 @@ Then, open your browser at http://localhost:8080/quotes.html. You can send quote
 
 # Verification in Kafka Topic
 
-Run  docker ps on the machine where kafa is running and get the container name. then run  docker exec -it kafka_kafka_1  /bin/bash to enter bash of the kafka container.
+Run  docker ps on the machine where kafa is running and get the container name. then run  "docker exec -it kafka_kafka_1  /bin/bash" to enter bash of the kafka container.
 
 Run the commands to view messages produced/consumed form both the topics used in the application.
 
